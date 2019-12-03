@@ -7,25 +7,27 @@ import pygameMenu
 WINDOW_SIZE = (1200, 800)
 
 # TEXTO DO MENU DE AJUDA
-HELP = ['Instrucoes: ',
-        'Use  as  setas  para  cima  e  para  baixo  para',
-        'mover  o  Turtlelorian.  Desvie  dos  obstaculos',
-        'e  sobreviva  o  maximo  de  tempo  possivel!']
+HELP = ['Instructions: ',
+        'Use  the  up  and  down  arrow  keys  to  move',
+        'the  Turtlelorian.   Avoid  the  obstacles  and',
+        'survive  as  long  as  you  can!']
 
 # TEXTO DO MENU DE CRÉDITOS
-ABOUT = ['Universidade  do  Estado  do  Amazonas  -  UEA',
-         'Bacharelado  Sistemas  da  Informacao',
-         'Laboratorio  de Programacao  de  Computadores',
-         'PROF.  DR.  JUCIMAR  JR',
+ABOUT = ['University  of  State  of  Amazonas  -  UEA',
+         'Information  Systems  Bachelor Degree',
+         'Computer  Programming  Laboratory',
+         'Prof.  Dr.  Jucimar  Jr',
          '                   ',
-         'GABRIEL  ALEXANDER  FARIAS  DE  LIMA  TEIXEIRA',
-         'HELDER  MELIK  SCHRAMM',
-         'NATAN',
+         'Developers:',
+         'Gabriel  Alexander  Farias  de  Lima  Teixeira',
+         'Helder  Melik  Schramm',
+         'Natan  Siqueira  dos  Santos',
          '                   ',
-         'Assets  de  terceiros:',
+         'Third-Party Assets:',
          'Pablo  Pizarro  R.  -  PygameMenu:  https://github.com/ppizarror/pygame-menu.git',
-         'Agradecimentos  especiais:'
-         'TECHWITHTIM  -  Tutorial  Pygame:  https://techwithtim.net']
+         'Special thanks:',
+         'Suki - Sprites and Animations, Menu Background',
+         'TechWithTim  -  Tutorial  Pygame:  https://techwithtim.net']
 
 # IMAGEM DE BACKGROUND DO JOGO
 IMG_BACKGROUND = None
@@ -85,12 +87,12 @@ def game_play(test=False):
                                      font_color=COLOR_BLACK,
                                      font_size=30,
                                      menu_alpha=100,
-                                     menu_height=int(WINDOW_SIZE[1] * 0.8),
-                                     menu_width=int(WINDOW_SIZE[0] * 0.8),
+                                     menu_height=int(WINDOW_SIZE[1] * 0.9),
+                                     menu_width=int(WINDOW_SIZE[0] * 0.9),
                                      onclose=pygameMenu.events.DISABLE_CLOSE,
                                      option_shadow=False,
                                      menu_color=COLOR_BACKGROUND,
-                                     title='Sobre o jogo',
+                                     title='About the game',
                                      window_height=WINDOW_SIZE[1],
                                      window_width=WINDOW_SIZE[0]
                                      )
@@ -107,12 +109,12 @@ def game_play(test=False):
                                     font_color=COLOR_BLACK,
                                     font_size=30,
                                     menu_alpha=100,
-                                    menu_height=int(WINDOW_SIZE[1] * 0.8),
-                                    menu_width=int(WINDOW_SIZE[0] * 0.8),
+                                    menu_height=int(WINDOW_SIZE[1] * 0.9),
+                                    menu_width=int(WINDOW_SIZE[0] * 0.9),
                                     onclose=pygameMenu.events.DISABLE_CLOSE,
                                     option_shadow=False,
                                     menu_color=COLOR_BACKGROUND,
-                                    title='Instrucoes',
+                                    title='Instructions',
                                     window_height=WINDOW_SIZE[1],
                                     window_width=WINDOW_SIZE[0]
                                     )
@@ -130,20 +132,20 @@ def game_play(test=False):
                                 font_size=30,
                                 menu_alpha=100,
                                 menu_color=COLOR_BACKGROUND,
-                                menu_height=int(WINDOW_SIZE[1] * 0.8),
-                                menu_width=int(WINDOW_SIZE[0] * 0.8),
+                                menu_height=int(WINDOW_SIZE[1] * 0.9),
+                                menu_width=int(WINDOW_SIZE[0] * 0.9),
                                 onclose=pygameMenu.events.DISABLE_CLOSE,
                                 option_shadow=False,
-                                title='Turtlelorian',
+                                title='',
                                 window_height=WINDOW_SIZE[1],
                                 window_width=WINDOW_SIZE[0]
                                 )
 
     # Criando as opções do menu
     play_menu.add_option('Start', play_function)
-    play_menu.add_option('Ajuda', help_menu)
-    play_menu.add_option('Sobre', about_menu)
-    play_menu.add_option('Sair', pygameMenu.events.EXIT)
+    play_menu.add_option('Help', help_menu)
+    play_menu.add_option('About', about_menu)
+    play_menu.add_option('Exit', pygameMenu.events.EXIT)
 
     # Ajustando
     play_menu.set_fps(FPS)
