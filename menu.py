@@ -6,7 +6,7 @@ import game_run
 from game_run import game_loop
 
 # AJUSTANDO VARIÁVEIS
-WINDOW_SIZE = (600, 881)
+WINDOW_SIZE = (600, 600)
 
 # TEXTO DO MENU DE AJUDA
 HELP = ['Instructions: ',
