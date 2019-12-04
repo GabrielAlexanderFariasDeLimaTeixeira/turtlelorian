@@ -6,7 +6,7 @@ import game_run
 from game_run import game_loop
 
 # AJUSTANDO VARIÁVEIS
-WINDOW_SIZE = (600, 600)
+WINDOW_SIZE = (800, 600)
 
 # TEXTO DO MENU DE AJUDA
 HELP = ['Instructions: ',
@@ -140,9 +140,9 @@ def game_play(test=False):
                                 menu_width=int(WINDOW_SIZE[0] * 0.9),
                                 onclose=pygameMenu.events.DISABLE_CLOSE,
                                 option_shadow=False,
-                                title='',
+                                title='Turtlelorian',
                                 window_height=WINDOW_SIZE[1],
-                                window_width=WINDOW_SIZE[0]
+                                window_width=WINDOW_SIZE[0],
                                 )
 
     # Criando as opções do menu
