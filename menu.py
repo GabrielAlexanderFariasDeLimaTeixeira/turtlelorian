@@ -2,32 +2,34 @@
 import sys
 import pygame
 import pygameMenu
+import game_run
+from game_run import game_loop
 
 # AJUSTANDO VARIÁVEIS
 WINDOW_SIZE = (1200, 800)
 
 # TEXTO DO MENU DE AJUDA
 HELP = ['Instructions: ',
-        'Use  the  up  and  down  arrow  keys  to  move',
-        'the  Turtlelorian.   Avoid  the  obstacles  and',
-        'survive  as  long  as  you  can!']
+        'Use  the  W  and  S  arrow  keys  to  move  up',
+        'and  down  the  Turtlelorian.   Avoid  the  obstacles',
+        'and  survive  as  long  as  you  can!']
 
 # TEXTO DO MENU DE CRÉDITOS
-ABOUT = ['University  of  State  of  Amazonas  -  UEA',
-         'Information  Systems  Bachelor Degree',
-         'Computer  Programming  Laboratory',
-         'Prof.  Dr.  Jucimar  Jr',
+ABOUT = ['University   of   State   of   Amazonas   -   UEA',
+         'Information   Systems   Bachelor Degree',
+         'Computer   Programming   Laboratory',
+         'Prof.   Dr.   Jucimar   Jr',
          '                   ',
          'Developers:',
-         'Gabriel  Alexander  Farias  de  Lima  Teixeira',
-         'Helder  Melik  Schramm',
-         'Natan  Siqueira  dos  Santos',
+         'Gabriel   Alexander   Farias   de   Lima   Teixeira',
+         'Helder   Melik   Schramm',
+         'Natan   Siqueira   dos   Santos',
          '                   ',
          'Third-Party Assets:',
-         'Pablo  Pizarro  R.  -  PygameMenu:  https://github.com/ppizarror/pygame-menu.git',
-         'Special thanks:',
-         'Suki - Sprites and Animations, Menu Background',
-         'TechWithTim  -  Tutorial  Pygame:  https://techwithtim.net']
+         'Pablo   Pizarro   R.  -  PygameMenu:   https://github.com/ppizarror/pygame-menu.git',
+         'Special   thanks:',
+         'Suki   -   Sprites   and   Animations,   Menu   Background',
+         'TechWithTim   -   Tutorial   Pygame:   https://techwithtim.net']
 
 # IMAGEM DE BACKGROUND DO JOGO
 IMG_BACKGROUND = None
@@ -61,7 +63,9 @@ def main_background():
 
 # PROGRAMAR AQUI O LOOP DO JOGO
 def play_function():
-    exit()
+    global window
+    window = pygame.display.set_mode((600, 600))
+    game_loop()
 
 
 # CRIANDO LAÇO PRINCIPAL DO JOGO
