@@ -6,7 +6,7 @@ import game_run
 from game_run import game_loop
 
 # AJUSTANDO VARIÁVEIS
-WINDOW_SIZE = (1200, 800)
+WINDOW_SIZE = (600, 881)
 
 # TEXTO DO MENU DE AJUDA
 HELP = ['Instructions: ',
@@ -31,8 +31,6 @@ ABOUT = ['University   of   State   of   Amazonas   -   UEA',
          'Suki   -   Sprites   and   Animations,   Menu   Background',
          'TechWithTim   -   Tutorial   Pygame:   https://techwithtim.net']
 
-# IMAGEM DE BACKGROUND DO JOGO
-IMG_BACKGROUND = None
 
 # COR DA TELA
 COLOR_BACKGROUND = (128, 0, 128)
@@ -43,7 +41,7 @@ COLOR_WHITE = (255, 255, 255)
 FPS = 60.0
 
 # IMAGEM DO BACKGROUND DO MENU
-MENU_BACKGROUND = None
+MENU_BACKGROUND = pygame.image.load('images/bft3.png').convert_alpha()
 
 # RELÓGIO DE FRAMES
 clock = None
@@ -85,6 +83,7 @@ def game_play(test=False):
 
     # Menu sobre o jogo
     about_menu = pygameMenu.TextMenu(window,
+                                     text_fontsize=15,
                                      bgfun=main_background,
                                      color_selected=COLOR_WHITE,
                                      font=pygameMenu.font.FONT_BEBAS,
@@ -112,6 +111,7 @@ def game_play(test=False):
                                     font=pygameMenu.font.FONT_BEBAS,
                                     font_color=COLOR_BLACK,
                                     font_size=30,
+                                    text_fontsize=23,
                                     menu_alpha=100,
                                     menu_height=int(WINDOW_SIZE[1] * 0.9),
                                     menu_width=int(WINDOW_SIZE[0] * 0.9),

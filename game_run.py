@@ -74,7 +74,7 @@ class Turtlelorian(pygame.sprite.Sprite):
         self.rect[1] = WIN_HGT / 2
 
     def update(self):
-        self.current_image = (self.current_image + 1) % 3
+        self.current_image = (3)
         self.image = self.images[self.current_image]
 
         if self.speed > 0.5:
@@ -110,7 +110,7 @@ class Ground(pygame.sprite.Sprite):
     def __init__(self, x):
         pygame.sprite.Sprite.__init__(self)
 
-        self.image = pygame.image.load('images/sand.png').convert_alpha()
+        self.image = pygame.image.load('images/sand1.png').convert_alpha()
         self.image = pygame.transform.scale(self.image, (SOIL_WID, SOIL_HGT))
 
         self.mask = pygame.mask.from_surface(self.image)
@@ -148,8 +148,10 @@ def game_loop():
             press = pygame.key.get_pressed()
             if press[pygame.K_w] == 1:
                 ttl.jetpack_up()
+                ttl.current_image = (4)
             if press[pygame.K_s] == 1:
                 ttl.jetpack_down()
+                ttl.current_image =(2)
             if event.type == pygame.QUIT:
                 run = False
                 pygame.quit()
